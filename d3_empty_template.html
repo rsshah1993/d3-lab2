@@ -9,7 +9,12 @@
 
 </head>
 <body>
-
+  <div id="option">
+      <input name="updateButton"
+                   type="button"
+                  value="Original Data"
+                  onclick="updateData()" />
+  </div>
 
   <script>
 
@@ -225,7 +230,6 @@ var options = select
                 return d.key
               });
 function updateData(){
-  d3.select('button')
   drawBars(all_data)
 }
 
@@ -273,11 +277,6 @@ function updateData(){
 
 });
   </script>
-  <div id="option">
-      <input name="updateButton"
-                   type="button"
-                  value="Original Data"
-                  onclick="updateData()" />
-  </div>
+
 </body>
 </html>
