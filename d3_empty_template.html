@@ -9,11 +9,8 @@
 
 </head>
 <body>
-  <div id="option">
-      <input name="updateButton"
-                   type="button"
-                  value="Original Data"
-                  onclick="drawBars()" />
+  <div id="button">
+      <button id = 'original'>Original Data </button>
   </div>
 
   <script>
@@ -229,9 +226,15 @@ var options = select
               .text(function (d){
                 return d.key
               });
-function updateData(){
-  drawBars(all_data)
-}
+
+var button = d3.select('#original')
+            .on('click', function (d,i){
+              drawBars(all_data)
+
+            })
+// function updateData(){
+//   drawBars(all_data)
+// }
 
   function onChange2(){
     selectValue = this.value
