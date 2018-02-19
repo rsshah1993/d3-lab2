@@ -91,7 +91,7 @@ function drawBars(some_data){
 
   var bars = svg.selectAll(".bar")
   //add a mapping function that maps bars key to key here
-    .data(some_data, (d)=> d.key)
+    .data(all_data, (d)=> d.key)
 
     bars.exit()
     .transition(t)
@@ -228,10 +228,13 @@ var options = select
               });
 
 var button = d3.select('#original')
-            .on('click', function (d,i){
-              drawBars(all_data)
-
+            .on('click', function (d){
+                drawBars(all_data);
             })
+            // .on('click', function(i){
+            //
+            //   // drawScales();
+            // })
 // function updateData(){
 //   drawBars(all_data)
 // }
